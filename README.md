@@ -1,2 +1,2 @@
-# snort-malware-detection
-Intrusion Detection through Snort
+# Malware Detection with Snort
+
