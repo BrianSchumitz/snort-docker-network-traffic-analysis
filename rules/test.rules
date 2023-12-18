@@ -1,0 +1,47 @@
+alert tcp any any -> $HOME_NET any (msg:"TCP connection test"; sid:10001; rev:1;)
+
+alert tcp any any -> $HOME_NET any (msg:"MALWARE TRAFFIC"; content:"SHA-256"; sid:10001; rev:1;)
+
+alert tcp any any -> any any (msg:"MALWARE TRAFFIC"; content:"SHA-256"; sid:10001; rev:1;)
+
+
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens Web Activity"; content:"/CSS/S7Web.css"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens Web Activity"; content:"/Images/CPU1200/"; sid:1; rev:1;)
+
+alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"S7-1200 Controller Family"; sid:1; rev:1;)
+
+alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"commonName=S7-1200 Controller Family"; sid:1; rev:1;)
+
+alert tcp any 443 -> any any (msg: "ELITEWOLF S7-1200 Possible Siemens X509 certificate activity"; content:"issuer_CN: S7-1200 Controller Family"; sid:1; rev:1;)
+
+
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-TCP REQUEST"; content:"/rokform/advancedDiags?pageReq=tcp"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-SYSTEM DATA DETAIL"; content:"/rokform/SysDataDetail?name="; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-UDP TABLE"; content:"/rokform/advancedDiags?pageReq=udptable"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-TCP CONNECT"; content:"rokform/advancedDiags?pageReq=tcpconn"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-IP ROUTE"; content:"/rokform/advancedDiags?pageReq=iproute"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-GENERAL MEMORY"; content:"/rokform/advancedDiags?pageReq=genmem"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-HEAP REQUEST"; content:"/rokform/advancedDiags?pageReq=heap"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-ICMP REQUEST"; content:"/rokform/advancedDiags?pageReq=icmp"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-ARP REQUEST"; content:"/rokform/advancedDiags?pageReq=arp"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-UDP REQUEST"; content:"/rokform/advancedDiags?pageReq=udp"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-IF REQUEST"; content:"/rokform/advancedDiags?pageReq=if"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-IP REQUEST"; content:"/rokform/advancedDiags?pageReq=ip"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-CSS Path"; content:"/css/radevice.css"; sid:1; rev:1;)
+
+alert tcp any 80 -> any any (msg: "ELITEWOLF Allen-Bradley/Rockwell Automation URL Path Activity-SYSTEM LIST DATA"; content:"/rokform/SysListDetail?name=";sid:1;rev:1;)
