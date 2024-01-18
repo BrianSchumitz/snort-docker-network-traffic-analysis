@@ -43,7 +43,7 @@
         * *alert_fast ={file = true, packet = false, limit = 10}*
 
 #### Creating Docker Containers and Web Server
-* Download the file, Dockerfile, and the folder 'web-server' into a directory (name this directory 'benign')
+* Download the folder 'web-server' into a directory (name this directory 'benign')
 * Open a terminal window into this directory 
 * Add the benign video to the 'html' folder
 * With docker installed, run the following command in the terminal window:
