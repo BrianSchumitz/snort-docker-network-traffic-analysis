@@ -8,7 +8,7 @@
 
 #### Project Goals
 * See how Snort IDS works in detecting malware from a web server.
-* See if the project triggers any rules from various rulesets and logs them.
+* See if the project triggers any Snort rules from various rulesets and logs them.
 
 #### Project Overview
 * We were given this project to continue from the REU 2023 students. We followed the instructions on how to run the project outlined [here](https://github.com/MSUSEL/reu-2023-snort). The previous result that the REU 2023 students achieved was a Snort alert that triggered a ping. The REU 2023 students noted that logging alerts with custom Snort rules worked best for them the best, so that is what we did moving forward.
