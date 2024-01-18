@@ -118,4 +118,12 @@
 * What Worked
     * The REU 2023 students noted in their documentation that logging alerts with custom rules worked for them, so that is the approach we took and we successfully logged an alert that content matched the malware. Therefore, content matching with custom Snort rules worked.
 * What Did Not Work
-    * We had differing results based on how we spun up the docker containers. When using 'docker run', the malware would not fully download onto the computer but the content matching Snort alert would trigger. When using 'docker-compose up', the malware would be downloaded onto the computer but the Snort alert would not trigger. Given this, the REU 2023 students noted in their documentation that the project is supposed to run using docker run.
+    * We had differing results based on how we spun up the docker containers. When using 'docker run', the malware would not fully download onto the computer but the content matching Snort alert would trigger. When using 'docker-compose up', the malware would be downloaded onto the computer but the Snort alert would not trigger. Given this, the REU 2023 students noted in their documentation that the project is supposed to run using 'docker run'.
+    * Given these inconsistencies, it was difficult to get Snort and Wireshark to seamlessly work together. 
+
+ ### Future Research
+ * The REU 2023 students noted that the Snort community rule set may not be comprehensive enough to reliably detect malware downloads from the internet. This is why we moved on to create custom rules, and creating custom rules worked to a certain extent given the inconsistencies outlined in the **Discussion**. Moving forward, trying packet sniffers such as Suricata may be able to better detect malware.
+ 
+ ### Acknowledgements
+ *  This project is based upon work supported by the National Science Foundation under Grant No. 1947750. Any opinions, findings, conclusions, or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
+ 
