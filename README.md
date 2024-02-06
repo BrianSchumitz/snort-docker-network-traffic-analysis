@@ -110,7 +110,7 @@
 
 #### Results
 * We re-ran the project with our new *test.rules* ruleset and that resulted in an alert from the following rule:
-    * *alert tcp any any -> $HOME_NET any (msg: “MALWARE TRAFFIC”; content: “SHA-256”; sid: 10001; rev: 1;)*
+    * *alert tcp any any -> any any (msg: “MALWARE TRAFFIC”; content: “SHA-256”; sid: 10001; rev: 1;)*
       * *SHA-256* being the malware signature
 * This rule used content matching to detect malware from the web server and logged the alert in *alert_fast.txt*.
 
